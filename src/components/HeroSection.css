@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Oswald:wght@500;700;900&family=Playfair+Display:wght@600&display=swap');
+
+/* ========================================= */
+/* 1. MẶC ĐỊNH DESKTOP (Màn hình lớn)        */
+/* ========================================= */
+.hero-container { position: relative; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; background-color: #0f1923; }
+
+.navbar { position: fixed; top: 0; left: 0; width: 100%; height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; background-color: #111111; z-index: 9999; border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s ease-in-out; }
+.navbar-hidden { transform: translateY(-100%); }
+.navbar-left, .navbar-right { display: flex; align-items: center; }
+
+/* Wrapper logo Riot Navbar */
+.riot-wrapper { display: flex; align-items: center; cursor: pointer; padding: 10px; margin-left: -10px; border-radius: 6px; transition: 0.2s; }
+.riot-wrapper:hover { background-color: rgba(255, 255, 255, 0.1); }
+.riot-logo { height: 130px; width: auto; object-fit: contain; cursor: pointer; }
+.arrow-icon { font-size: 10px; color: #7e7e7e; margin-left: 8px; cursor: pointer; transition: 0.2s; }
+.riot-wrapper:hover .arrow-icon { color: white; }
+
+.nav-divider { width: 2px; height: 24px; background-color: #333; margin: 0 24px; border-radius: 2px; }
+.v-logo-small-wrapper { display: flex; align-items: center; }
+.v-logo-small { height: 35px; width: auto; object-fit: contain; cursor: pointer; }
+
+/* CSS CHO NAV LINKS VÀ MENU SỔ XUỐNG (DROPDOWN) */
+.nav-links { display: flex; list-style: none; margin-left: 15px; }
+.nav-links li { position: relative; display: flex; align-items: center; height: 80px; }
+.nav-links li a { color: white; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: bold; padding: 8px 12px; letter-spacing: 1px; transition: 0.3s; display: flex; align-items: center; }
+.nav-links li > a:hover { background-color: #292929; border-radius: 8px; }
+.nav-links li.has-dropdown:hover > a { background-color: #292929; border-radius: 8px; }
+
+.menu-arrow { font-size: 8px; margin-left: 6px; color: #7e7e7e; }
+
+.dropdown-menu { position: absolute; top: 80px; left: 0; background-color: #292929; min-width: 220px; list-style: none; padding: 10px 0; margin: 0; border-top: 4px solid #ff4655; border-radius: 0 0 4px 4px; opacity: 0; visibility: hidden; transform: translateY(15px); transition: all 0.3s ease-in-out; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); z-index: 1000; }
+.nav-links li.has-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu li { width: 100%; height: auto; }
+.nav-links li .dropdown-menu li a { display: block; padding: 12px 20px; font-size: 13px; color: #b2b2b2; font-weight: 600; text-transform: uppercase; background-color: transparent; border-radius: 0; }
+.nav-links li .dropdown-menu li a:hover { background-color: #383838; color: #ffffff; border-radius: 0; }
+
+.icon-group { display: flex; margin-right: 15px; }
+.nav-icon-bg { background-color: #292929; width: 35px; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 12px; margin-left: 10px; cursor: pointer; color: white; }
+.download-nav-btn { background: linear-gradient(135deg, #ff4655, #ff606c); color: black; border: none; padding: 10px 20px; border-radius: 10px; font-weight: bold; font-size: 12px; cursor: pointer; letter-spacing: 0.5px; transition: filter 0.2s; }
+.download-nav-btn:hover { filter: brightness(1.1); }
+
+/* Nút Mobile ẩn mặc định trên Desktop */
+.mobile-menu-btn { display: none; }
+
+.hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.3); z-index: 2; }
+.age-rating { position: absolute; top: 79px; left: 0px; z-index: 3; } 
+.age-rating img { height: 90px; }
+.hero-content { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 40px; margin-top: 80px; } 
+.hero-logo { width: 375px; max-width: 80vw; }
+.hero-mobile-desc { display: none; } /* Ẩn chữ phụ trên Desktop */
+
+.btn-wrapper { padding: 4px; border: 1px solid rgba(255, 255, 255, 0.5); transition: border-color 0.3s ease; display: inline-block; }
+.btn-wrapper:hover { border-color: #ffffff; }
+.hero-btn { background-color: #ff4655; color: white; font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 16px; padding: 16px 40px; border: none; cursor: pointer; transition: background-color 0.3s ease; }
+.hero-btn:hover { background-color: #ff5866; }
+
+/* MEGA MENU CỦA RIOT GAMES */
+.riot-mega-menu { position: fixed; top: 0; left: 0; width: 100%; background-color: #ffffff; z-index: 10000; transform: translateY(-100%); transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-bottom: 1px solid #eaeaea; }
+.riot-mega-menu.open { transform: translateY(0); }
+.mega-menu-content { max-width: 1400px; margin: 0 auto; padding: 20px 40px 50px 40px; }
+.mega-menu-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.mega-menu-riot-logo { display: inline-flex; align-items: center; cursor: pointer; transition: opacity 0.2s; }
+.mega-menu-riot-logo:hover { opacity: 0.7; }
+.mega-menu-riot-logo img { height: 60px; object-fit: contain; } 
+.close-mega-menu { background-color: #f1f1f1; border: none; width: 36px; height: 36px; border-radius: 50%; font-size: 16px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; color: #555; transition: background-color 0.2s; }
+.close-mega-menu:hover { background-color: #e1e1e1; color: #000; }
+.menu-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 2.5fr 2.5fr; gap: 20px; }
+.links-column.sectioned { display: flex; flex-direction: column; gap: 30px; }
+.column-title { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 800; color: #333; margin: 0 0 15px 0; text-transform: uppercase; background-color: #f4f4f4; padding: 8px 12px; border-radius: 4px; letter-spacing: 0.5px; display: block; }
+.links-column ul { list-style: none; padding: 0; margin: 0; }
+.links-column li { border-radius: 6px; transition: background-color 0.2s ease; margin-bottom: 2px; }
+.links-column li:hover, .links-column li.active-item { background-color: #f4f4f4; }
+.links-column a { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; color: #555; text-decoration: none; transition: color 0.2s; display: inline-block; padding-left: 12px; }
+.links-column li:hover a, .links-column li.active-item a { color: #ff4655; }
+.menu-card { display: flex; flex-direction: column; gap: 12px; text-decoration: none; cursor: pointer; transition: opacity 0.2s; }
+.menu-card:hover { opacity: 0.8; }
+.card-img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; }
+.card-info p { font-family: 'Montserrat', sans-serif; font-size: 12px; color: #333; line-height: 1.5; margin: 0; font-weight: 500; }
+.banner-column { grid-column: 4 / span 2; width: 100%; height: 100%; min-height: 300px; border-radius: 8px; overflow: hidden; background-color: #111; display: flex; justify-content: center; align-items: center; }
+.hover-banner-img { width: 100%; height: 100%; animation: fadeIn 0.3s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0.6; transform: scale(1.02); } to { opacity: 1; transform: scale(1); } }
+
+/* CÁC SECTION KHÁC  */
+.news-section { background-color: #ece8e1; padding: 80px 40px; color: #0f1923; }
+.news-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; }
+.news-main-title { font-family: 'Oswald', sans-serif; font-size: 40px; font-weight: 900; margin: 0; color: #0f1923; }
+.news-link { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: bold; color: #ff4655; text-decoration: none; display: flex; align-items: center; gap: 5px; transition: color 0.3s; }
+.news-link:hover { color: #0f1923; }
+.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.news-card { display: flex; flex-direction: column; cursor: pointer; }
+.news-img-wrapper { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; }
+.news-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.news-card:hover .news-img { transform: scale(1.05); }
+.news-img-icon { position: absolute; bottom: 0; right: 0; background-color: #0f1923; color: white; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; font-size: 12px; }
+.news-content { padding-top: 20px; }
+.news-meta { font-size: 12px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-bottom: 10px; }
+.news-category { color: #ff4655; }
+.news-divider { color: #7e7e7e; margin: 0 10px; }
+.news-date { color: #333333; }
+.news-title { font-size: 20px; font-weight: 800; margin: 0 0 10px 0; color: #0f1923; line-height: 1.3; }
+.news-desc { font-size: 14px; color: #555555; line-height: 1.5; margin: 0; }
+
+.season-section { position: relative; display: flex; align-items: center; padding: 100px 80px; min-height: 600px; overflow: hidden; color: #0f1923; background-color: #d7efda; }
+.season-left { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 20px; max-width: 450px; }
+.season-subtitle { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: bold; margin: 0; text-transform: uppercase; }
+.season-title { font-family: 'Oswald', sans-serif; font-size: 60px; font-weight: 900; margin: 0; line-height: 1.1; text-transform: uppercase; }
+.season-desc { font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.6; margin: 0; font-weight: 500; }
+.season-btn-wrapper { border-color: rgba(15, 25, 35, 0.5); align-self: flex-start; }
+.season-btn-wrapper:hover { border-color: #0f1923; }
+.season-btn { font-size: 14px; padding: 12px 30px; }
+.season-right { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; display: block; }
+.season-img { width: 100%; height: 100%; object-fit: cover; object-position: center right; margin-right: 0; }
+
+.we-are-valorant-section { position: relative; background-color: #ece8e1; display: flex; justify-content: space-between; align-items: center; padding: 120px 80px; color: #0f1923; overflow: hidden; gap: 50px; }
+.we-are-left { flex: 1; position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; }
+.we-are-title { font-family: 'Playfair Display', serif; font-size: 55px; font-weight: 600; color: #0f1923; margin: 0 0 30px 0; letter-spacing: 1px; text-transform: uppercase; }
+.subtitle-wrapper { display: flex; align-items: center; margin-bottom: 20px; }
+.red-dot { width: 6px; height: 6px; background-color: #ff4655; margin-right: 15px; }
+.we-are-subtitle { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: bold; color: #0f1923; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; }
+.we-are-desc { font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.7; color: #333333; margin: 0 0 45px 0; max-width: 550px; }
+.we-are-btn-container { position: relative; display: inline-block; padding: 6px; border: 1px solid rgba(0, 0, 0, 0.1); align-self: flex-start; z-index: 3; }
+.we-are-btn-container .hero-btn { background-color: #ff4655; color: white; padding: 18px 35px; font-size: 15px; font-weight: bold; transition: 0.3s; }
+.we-are-btn-container .hero-btn:hover { background-color: #ff5866; }
+.decor-bg-zeroes { position: absolute; bottom: -100px; left: 40px; font-family: 'Oswald', sans-serif; font-size: 180px; font-weight: 900; color: rgba(0, 0, 0, 0.04); line-height: 1; z-index: 1; pointer-events: none; letter-spacing: -5px; }
+.zero-dot { position: absolute; bottom: 30px; left: 80px; width: 6px; height: 6px; background-color: #ff4655; z-index: 2; }
+.we-are-right { flex: 1.2; z-index: 2; display: flex; justify-content: flex-end; position: relative; }
+.video-player-container { position: relative; width: 100%; max-width: 750px; aspect-ratio: 16 / 9; box-shadow: 0 15px 40px rgba(0,0,0,0.15); background-color: #000; overflow: hidden; }
+.we-are-media { width: 100%; height: 100%; object-fit: cover; }
+
+.agents-section { position: relative; background-color: #ff4655; display: flex; justify-content: center; align-items: center; padding: 80px 10px; color: white; overflow: hidden; gap: 350px; min-height: 60vh; }
+.agents-decor-grid { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.agent-dot { position: absolute; width: 60px; height: 10px; background-color: rgba(15, 25, 35, 0.2); }
+.agents-left { flex: 1; display: flex; justify-content: flex-end; z-index: 2; }
+.agents-img { width: 500%; max-width: 650px; height: auto; object-fit: contain; justify-content: center; }
+.agents-right { flex: 1; display: flex; flex-direction: column; justify-content: center; z-index: 3; max-width: 5000px; }
+.agents-title { font-family: 'Oswald', sans-serif; font-size: 65px; font-weight: 700; color: white; margin: 0 0 15px 0; letter-spacing: 1px; text-transform: uppercase; }
+.agents-subtitle { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 800; color: white; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: 0.5px; }
+.agents-desc { font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.7; color: white; margin: 0 0 35px 0; font-weight: 500; }
+.agents-btn-wrapper { border: 1px solid rgba(255, 255, 255, 0.4); padding: 6px; display: inline-block; align-self: flex-start; transition: 0.3s; }
+.agents-btn-wrapper:hover { border-color: #ffffff; }
+.agents-btn { background-color: #0f1923; color: white; padding: 18px 40px; font-size: 14px; font-weight: bold; border: none; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
+.agents-btn:hover { background-color: #1f2a33; }
+
+.maps-section { position: relative; background-color: #ece8e1; display: flex; justify-content: space-between; align-items: center; padding: 100px 80px 100px 100px; color: #0f1923; overflow: hidden; }
+.maps-watermark { position: absolute; top: 15%; left: 5%; font-family: 'Oswald', sans-serif; font-size: 220px; font-weight: 900; color: transparent; -webkit-text-stroke: 2px rgba(0, 0, 0, 0.04); line-height: 1; z-index: 1; letter-spacing: 15px; }
+.maps-decor-sidebar { position: absolute; left: 20px; top: 0; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 150px; z-index: 2; }
+.map-square { width: 8px; height: 8px; background-color: #7e7e7e; }
+.maps-left { flex: 1; padding-right: 40px; z-index: 2; }
+.maps-title { font-family: 'Oswald', sans-serif; font-size: 45px; font-weight: normal; color: #0f1923; margin: 0 0 40px 0; letter-spacing: 1px; }
+.maps-subtitle { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; color: #0f1923; margin: 0 0 15px 0; text-transform: uppercase; position: relative; padding-left: 15px; }
+.maps-subtitle::before { content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 4px; height: 4px; background-color: #0f1923; }
+.maps-desc { font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 1.6; color: #333333; margin: 0 0 40px 0; max-width: 500px; }
+.maps-btn-wrapper { border-color: rgba(15, 25, 35, 0.2); }
+.maps-btn-wrapper:hover { border-color: #0f1923; }
+.maps-right { flex: 1.2; z-index: 2; display: flex; justify-content: flex-end; }
+.maps-img { width: 100%; max-width: 700px; height: auto; object-fit: cover; }
+
+.footer-section { background-color: #111111; color: #7e7e7e; display: flex; flex-direction: column; }
+.footer-top { background-color: #292929; padding: 25px 0; text-align: center; color: white; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; letter-spacing: 1px; cursor: pointer; transition: background-color 0.3s; }
+.footer-top:hover { background-color: #3a3a3a; }
+.footer-main { padding: 60px 20px; display: flex; flex-direction: column; align-items: center; gap: 35px; text-align: center; }
+.social-links { display: flex; gap: 20px; }
+.social-icon { background-color: #292929; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; transition: background-color 0.3s; }
+.social-icon:hover { background-color: #ff4655; }
+.footer-logos { display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 20px; }
+.footer2-logo { height: 100px; object-fit: contain; opacity: 0.8; cursor: pointer; transition: opacity 0.3s ease; margin: 0; }
+.footer1-logo { height: 20px; object-fit: contain; opacity: 0.8; cursor: pointer; transition: opacity 0.3s ease; margin: 0; }
+.footer-logo { height: 55px; object-fit: contain; opacity: 0.8; cursor: pointer; transition: opacity 0.3s ease; margin: 0; }
+.footer-logos img:hover { opacity: 1; }
+.copyright { font-family: 'Montserrat', sans-serif; font-size: 13px; margin: 0; }
+.company-info { font-family: 'Montserrat', sans-serif; font-size: 12px; line-height: 1.8; max-width: 800px; margin: 0 auto; }
+.company-info p { margin: 0; }
+.footer-legal { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; }
+.footer-legal a { color: white; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 13px; letter-spacing: 0.5px; transition: color 0.3s; }
+.footer-legal a:hover { color: #ff4655; }
+.warning-18-footer img { max-width: 300px; height: auto; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 4px; }
+
+
+/* ========================================= */
+/* 2. RESPONSIVE CHO TABLET & MOBILE         */
+/* (Màn hình từ 1024px trở xuống)         */
+/* ========================================= */
+@media (max-width: 1024px) {
+  /* --- NAVBAR (HEADER) --- */
+  .navbar { padding: 0 15px; height: 60px; }
+  .nav-links, .icon-group .nav-icon-bg:not(.globe-icon), .download-nav-btn { display: none; }
+  .v-logo-small-wrapper { position: absolute; left: 50%; transform: translateX(-50%); }
+  .v-logo-small { height: 25px; }
+  .riot-logo { height: 60px; }
+  .nav-divider { display: none; }
+  
+  /* Nút Burger Menu */
+  .mobile-menu-btn { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; width: 40px; height: 40px; background-color: #292929; border-radius: 50%; border: none; cursor: pointer; }
+  .mobile-menu-btn .burger-bar { width: 18px; height: 2px; background-color: white; }
+
+  /* --- HERO SECTION --- */
+  .hero-content { margin-top: 40px; padding: 0 20px; width: 100%; text-align: center; gap: 20px; }
+  .hero-logo { width: 90%; max-width: 300px; margin-bottom: 10px; }
+  .hero-mobile-desc { display: block; font-family: 'Oswald', sans-serif; font-size: 1.1rem; color: white; text-transform: uppercase; line-height: 1.2; margin: 0 auto; max-width: 400px; letter-spacing: 0.5px; }
+  .btn-wrapper { display: block; width: 100%; max-width: 350px; margin: 0 auto; padding: 3px; }
+  .hero-btn { width: 100%; padding: 18px 0; font-size: 15px; }
+
+  /* --- CÁC SECTION DƯỚI DÀN THÀNH CỘT DỌC --- */
+  .news-grid { grid-template-columns: 1fr; gap: 20px; }
+  .season-section, .we-are-valorant-section, .agents-section, .maps-section { flex-direction: column; padding: 60px 20px; gap: 30px; text-align: center; }
+  .season-right, .we-are-right, .agents-left, .maps-right { position: relative; width: 100%; justify-content: center; display: flex; }
+  .season-img, .agents-img, .maps-img { width: 100%; max-width: 100%; }
+  
+  /* Canh giữa các nút bấm ở các section */
+  .season-btn-wrapper, .we-are-btn-container, .agents-btn-wrapper, .maps-btn-wrapper { align-self: center; margin: 0 auto; }
+}
+
+
+/* ========================================= */
+/* 3. TINH CHỈNH CHI TIẾT CHO MOBILE          */
+/* (Sửa lỗi ảnh - Từ 768px trở xuống)     */
+/* ========================================= */
+@media (max-width: 768px) {
+  
+  /* --- 1. KHU VỰC TIN TỨC (Sửa lỗi chữ đè nhau) --- */
+  .news-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+  .news-main-title { font-size: 40px !important; line-height: 1.2 !important; }
+
+  /* --- 2. KHU VỰC "CHÚNG TÔI LÀ VALORANT" (Sửa lỗi rớt chữ T) --- */
+  .we-are-title { font-size: 36px !important; line-height: 1.1 !important; letter-spacing: 0px !important; }
+  .we-are-subtitle { font-size: 13px !important; }
+  .we-are-desc { font-size: 14px !important; }
+  
+  /* Căn lại video cho full màn hình điện thoại */
+  .we-are-right { width: 100%; margin-top: 10px; }
+  .video-player-container { width: 100%; max-width: 100%; }
+
+  /* Thu nhỏ các tiêu đề to khác để phòng hờ rớt chữ */
+  .agents-title, .maps-title, .season-title { font-size: 40px !important; line-height: 1.1 !important; }
+
+  /* --- 3. KHU VỰC FOOTER (Căn chỉnh gọn gàng) --- */
+  .footer-logos { flex-direction: column !important; gap: 30px !important; margin-bottom: 30px; }
+  .footer2-logo { height: 80px; }
+  .footer1-logo { height: 30px; }
+  .footer-logo { height: 45px; }
+
+  /* Ép các link điều khoản xếp dọc trên mobile */
+  .footer-legal { flex-direction: column !important; align-items: center; gap: 20px; }
+  
+  .company-info { font-size: 11px !important; padding: 0 10px; text-align: center; }
+}
