@@ -28,29 +28,29 @@ function HeroSection() {
   };
 
   const bannerData = {
-    'lmht': { src: '/lmht1.jpg', style: { objectFit: 'cover', transform: 'scale(1)', objectPosition: 'center' } },
-    'tocchien': { src: '/tocchien.webp', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'dtcl': { src: '/TFT.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'valorant': { src: '/miks.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'runeterra': { src: '/banner-runeterra.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'convergence': { src: '/banner-convergence.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'ruinedking': { src: '/banner-ruinedking.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'songofnunu': { src: '/banner-songofnunu.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'riotforge': { src: '/banner-riotforge.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'lolesports': { src: '/banner-lolesports.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'valoesports': { src: '/banner-valoesports.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'arcane': { src: '/banner-arcane.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'vutru': { src: '/banner-vutru.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'music': { src: '/banner-music.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'riotgames': { src: '/banner-riotgames.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'support': { src: '/banner-support.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
-    'default': { src: '/lmht.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } } 
+    'lmht': { src: './lmht1.jpg', style: { objectFit: 'cover', transform: 'scale(1)', objectPosition: 'center' } },
+    'tocchien': { src: './tocchien.webp', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'dtcl': { src: './TFT.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'valorant': { src: './miks.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'runeterra': { src: './ruinedking.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'convergence': { src: './conv.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'ruinedking': { src: './ruinedking.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'songofnunu': { src: './songofnunu.avif', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'riotforge': { src: './Riotforge.webp', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'lolesports': { src: './lolesport.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'valoesports': { src: './valoesport.jpeg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'arcane': { src: './arcane.webp', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'vutru': { src: './vutrulmht.jpeg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'music': { src: './riotmusic.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'riotgames': { src: './posterriot.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'support': { src: './riotsupport.jpg', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } },
+    'default': { src: '.', style: { objectFit: 'cover', transform: 'scale(1.0)', objectPosition: 'center' } } 
   };
 
   const newsList = [
-    { id: 1, imgSrc: "/phienban1201.png.jpg", category: "CẬP NHẬT TRÒ CHƠI", date: "2 tháng trước", title: "VALORANT - Phiên Bản 12.01", desc: "MFA sẽ được triển khai tại EU, Cổng Thông Tin Esports sẽ trở lại cùng VCT26" },
-    { id: 2, imgSrc: "/valorantchall.jpg", category: "ESPORTS", date: "2 tháng trước", title: "Giới Thiệu VALORANT Challengers SEA 2026", desc: "Sau đây là những điều cần biết về Challengers SEA 2026, bao gồm cách đăng ký tham gia vòng loại mở!" },
-    { id: 3, imgSrc: "/ticket.jpg", category: "ESPORTS", date: "2 tháng trước", title: "Mở Bán Vé VCT Pacific Kickoff Vào Ngày 09/01!", desc: "Hãy trực tiếp theo dõi VCT Pacific Kickoff diễn ra tại Seoul, Hàn Quốc." }
+    { id: 1, imgSrc: "./phienban1201.png.jpg", category: "CẬP NHẬT TRÒ CHƠI", date: "2 tháng trước", title: "VALORANT - Phiên Bản 12.01", desc: "MFA sẽ được triển khai tại EU, Cổng Thông Tin Esports sẽ trở lại cùng VCT26" },
+    { id: 2, imgSrc: "./valorantchall.jpg", category: "ESPORTS", date: "2 tháng trước", title: "Giới Thiệu VALORANT Challengers SEA 2026", desc: "Sau đây là những điều cần biết về Challengers SEA 2026, bao gồm cách đăng ký tham gia vòng loại mở!" },
+    { id: 3, imgSrc: "./ticket.jpg", category: "ESPORTS", date: "2 tháng trước", title: "Mở Bán Vé VCT Pacific Kickoff Vào Ngày 09/01!", desc: "Hãy trực tiếp theo dõi VCT Pacific Kickoff diễn ra tại Seoul, Hàn Quốc." }
   ];
 
   return (
@@ -60,7 +60,7 @@ function HeroSection() {
         <div className="mega-menu-content" onMouseLeave={() => setActiveMenu(null)}>
           <div className="mega-menu-header">
             <div className="mega-menu-riot-logo" onClick={toggleRiotMenu}>
-              <img src="/LOGO-04.webp" alt="Riot Games" />
+              <img src="./LOGO-04.webp" alt="Riot Games" />
             </div>
             <button className="close-mega-menu" onClick={toggleRiotMenu}>✕</button>
           </div>
@@ -119,13 +119,13 @@ function HeroSection() {
                 <>
                   <div className="card-column">
                     <a href="#/" className="menu-card">
-                      <img src="/lmht.jpg" alt="ĐTCL" className="card-img" />
+                      <img src="./lmht.jpg" alt="ĐTCL" className="card-img" />
                       <div className="card-info"><p>Tái hiện những câu chuyện mang tính biểu tượng của Runeterra trong mùa ĐTCL lớn nhất từ trước đến nay!</p></div>
                     </a>
                   </div>
                   <div className="card-column">
                     <a href="#/" className="menu-card">
-                      <img src="/miks.jpg" alt="Valorant" className="card-img" />
+                      <img src="./miks.jpg" alt="Valorant" className="card-img" />
                       <div className="card-info"><p>Miks khuấy động bầu không khí, cân bằng thế trận và luôn giữ đúng nhịp độ cho đội của bạn.</p></div>
                     </a>
                   </div>
@@ -148,12 +148,12 @@ function HeroSection() {
         <nav className={`navbar ${showNavbar ? '' : 'navbar-hidden'}`}>
           <div className="navbar-left">
             <div className="riot-wrapper" onClick={toggleRiotMenu}>
-              <img src="/riot-games-new-logo-ust.png" alt="Riot" className="riot-logo" />
+              <img src="./riot-games-new-logo-ust.png" alt="Riot" className="riot-logo" />
               <span className="arrow-icon">▼</span>
             </div>
             <div className="nav-divider"></div>
             <div className="v-logo-small-wrapper">
-              <img src="/valo.png" alt="V" className="v-logo-small" />
+              <img src="./valo.png" alt="V" className="v-logo-small" />
             </div>
             <ul className="nav-links">
               <li className="has-dropdown">
@@ -189,12 +189,12 @@ function HeroSection() {
         </nav>
 
         <video autoPlay loop muted playsInline className="hero-video">
-          <source src="/bg-video.mp4" type="video/mp4" />
+          <source src="./bg-video.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay"></div>
-        <div className="age-rating"><img src="/thongbao18+.png.jpg" alt="18+" /></div>
+        <div className="age-rating"><img src="./thongbao18+.png.jpg" alt="18+" /></div>
         <div className="hero-content">
-          <img src="/valorant.png.png" alt="VALORANT" className="hero-logo" />
+          <img src="./valorant.png.png" alt="VALORANT" className="hero-logo" />
           <h2 className="hero-mobile-desc">
             VALORANT - TỰA GAME BẮN SÚNG CHIẾN THUẬT 5V5 VỚI SỰ GÓP MẶT CỦA NHỮNG ĐẶC VỤ CÙNG LOẠT KỸ NĂNG RIÊNG BIỆT
           </h2>
@@ -242,7 +242,7 @@ function HeroSection() {
           <button className="hero-btn season-btn">XEM NGAY</button>
         </div>
         <div className="season-right">
-          <img src="/viper.jpg" alt="Mùa Mới" className="season-img" />
+          <img src="./viper.jpg" alt="Mùa Mới" className="season-img" />
         </div>
       </section>
 
@@ -258,7 +258,7 @@ function HeroSection() {
         <div className="we-are-right">
           <div className="video-player-container">
             <video autoPlay loop muted playsInline className="we-are-media">
-              <source src="/hightlight.mp4" type="video/mp4" />
+              <source src="" type="video/mp4" />
             </video>
           </div>
         </div>
@@ -273,7 +273,7 @@ function HeroSection() {
           <div className="agent-dot" style={{ top: '10%', right: '30%' }}></div>
           <div className="agent-dot" style={{ bottom: '30%', right: '15%' }}></div>
         </div>
-        <div className="agents-left"><img src="/reynaraze.png.png" alt="Các Đặc Vụ" className="agents-img" /></div>
+        <div className="agents-left"><img src="./reynaraze.png.png" alt="Các Đặc Vụ" className="agents-img" /></div>
         <div className="agents-right">
           <h2 className="agents-title">ĐẶC VỤ CỦA BẠN</h2>
           <h4 className="agents-subtitle">SÁNG TẠO LÀ VŨ KHÍ TỐI THƯỢNG CỦA BẠN</h4>
@@ -292,7 +292,7 @@ function HeroSection() {
           <p className="maps-desc">Mỗi bản đồ đều là một sân chơi để bạn thỏa sức thể hiện tư duy sáng tạo của mình. Được xây dựng với mục đích phát triển chiến lược đội nhóm, các bản đồ VALORANT hứa hẹn mang đến cho người chơi những trận giao tranh ngoạn mục cùng với muôn vàn khoảnh khắc xuất thần. Hãy là nguồn cảm hứng cho tất cả người chơi VALORANT và tạo ra cho mình lối chơi độc nhất vô nhị.</p>
           <div className="btn-wrapper maps-btn-wrapper"><button className="hero-btn maps-btn">KHÁM PHÁ CÁC BẢN ĐỒ</button></div>
         </div>
-        <div className="maps-right"><img src="/split.png.png" alt="Bản Đồ Valorant" className="maps-img" /></div>
+        <div className="maps-right"><img src="./split.png.png" alt="Bản Đồ Valorant" className="maps-img" /></div>
       </section>
 
       {/* FOOTER */}
@@ -305,9 +305,9 @@ function HeroSection() {
             <a href="#/" className="social-icon">IG</a>
           </div>
           <div className="footer-logos">
-            <img src="/riot-games-new-logo-ust.png" alt="Riot Games" className="footer2-logo" />
-            <img src="/logoVNG.png.png" alt="VNG Games" className="footer1-logo" />
-            <img src="/logotrangvalorant.png.png" alt="Valorant" className="footer-logo" />
+            <img src="./riot-games-new-logo-ust.png" alt="Riot Games" className="footer2-logo" />
+            <img src="./logoVNG.png.png" alt="VNG Games" className="footer1-logo" />
+            <img src="./logotrangvalorant.png.png" alt="Valorant" className="footer-logo" />
           </div>
           <p className="copyright">© 2026 Riot Games, Inc.</p>
           <div className="company-info">
@@ -321,7 +321,7 @@ function HeroSection() {
             <a href="#/">ĐIỀU KHOẢN SỬ DỤNG (RIOT)</a>
             <a href="#/">ĐIỀU KHOẢN SỬ DỤNG (VNG)</a>
           </div>
-          <div className="warning-18-footer"><img src="/180ppng.png" alt="Cảnh báo 18+" /></div>
+          <div className="warning-18-footer"><img src="./180ppng.png" alt="Cảnh báo 18+" /></div>
         </div>
       </footer>
     </>
